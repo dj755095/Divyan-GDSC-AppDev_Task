@@ -17,11 +17,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
         android:text="Welcome to App Dev\nRegister here"
         android:textAlignment="center"
-        android:textSize="24dp"
-        android:layout_marginTop="200dp"
-        />
+        android:textSize="24dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/EmailLayout"
@@ -35,7 +34,7 @@
         android:layout_marginTop="300dp"
         android:layout_marginEnd="32dp"
         android:hint="Email"
-        app:startIconDrawable="@drawable/ic_person">
+        app:startIconDrawable="@drawable/baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailReg"
@@ -44,7 +43,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/PhoneLayout"
+        android:id="@+id/NameLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,20 +55,15 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="0dp"
 
-        android:hint="Phone Number"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:prefixText="+91"
-        app:startIconDrawable="@drawable/baseline_call_24">
+        android:hint="Full Name"
+        app:startIconDrawable="@drawable/ic_person">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phoneReg"
+            android:id="@+id/nameReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:maxLength="10" />
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -78,11 +72,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:layout_below="@+id/PhoneLayout"
+        android:layout_below="@+id/NameLayout"
         android:layout_alignStart="@+id/EmailLayout"
         android:layout_alignEnd="@+id/EmailLayout"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="0dp"
 
         android:hint="Password"
@@ -109,21 +103,31 @@
         android:layout_alignEnd="@+id/PasswordLayout"
         android:layout_marginStart="32dp"
 
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/custom_button"
         android:fontFamily="serif"
-        android:textStyle="bold"
         android:text="Register"
         android:textAllCaps="false"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/loginTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Register"
-        android:text="Already have a account? Login Now"
         android:layout_alignParentRight="true"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"/>
+        android:layout_marginEnd="20dp"
+        android:text="Already have a account? Login Now" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginTxt"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
 </RelativeLayout>
